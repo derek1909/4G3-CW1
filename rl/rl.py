@@ -106,12 +106,12 @@ for trial in range(N_trials):
 os.makedirs('./rl', exist_ok=True)
 
 # # Plotting code: 绘制刺激和奖励随时间变化的图像
-plt.figure()
+plt.figure(figsize=(8,2.5))
 plt.plot(time_points, [reward(t) for t in time_points], 'k-', label='Reward')
 plt.plot(time_points, [stimulus(t) for t in time_points], 'b--', label='Stimulus')
 plt.xlabel('Time (s)')
 plt.legend()
-plt.title('Stimulus and Reward Profile')
+# plt.title('Stimulus and Reward Profile')
 plt.savefig('./rl/stim_reward.png')  # 将图片保存到 ./rl 目录下
 plt.close()  # 关闭图形窗口
 
@@ -122,7 +122,7 @@ alphas = np.linspace(0.2, 1, len(selected_trials))
 fixed_color = 'blue'
 
 # Create a figure with 3 subplots sharing the same x-axis
-fig, axs = plt.subplots(3, 1, figsize=(8, 10), sharex=True)
+fig, axs = plt.subplots(3, 1, figsize=(6, 6), sharex=True)
 
 # Loop over each selected trial and plot using the corresponding alpha value.
 for i, trial_idx in enumerate(selected_trials):
@@ -150,7 +150,7 @@ os.makedirs('./rl', exist_ok=True)
 if is_tapped:
     plt.savefig('./rl/tapped_plot.png', dpi=300)
 else:    
-    plt.savefig('./rl/boxcar_plot2.png', dpi=300)
+    plt.savefig('./rl/boxcar_plot.png', dpi=300)
 plt.close()
 
 # 类似地，可绘制每个 selected trial 的 V, dV 和 delta 的三联图

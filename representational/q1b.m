@@ -1,6 +1,6 @@
 % Choose indices for the pair of components (example values)
 X = Y * R;
-k1 = 50;  % Example latent component index for k1
+k1 = 141;  % Example latent component index for k1
 k2 = 51; % Example latent component index for k2
 
 % Extract the latent variable values for k1 and k2 from the latent representation matrix X (size N x K)

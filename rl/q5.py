@@ -115,7 +115,7 @@ delta_unrewarded_avg = np.mean(last_100_delta[unrewarded_trials], axis=0)
 delta_overall_avg    = np.mean(last_100_delta, axis=0)
 
 
-fig, axs = plt.subplots(3, 1, figsize=(8, 10), sharex=True)
+fig, axs = plt.subplots(3, 1, figsize=(6, 6), sharex=True)
 
 # Plot average Value V(t)
 axs[0].plot(time_points, V_rewarded_avg, label='Rewarded', color='green')
@@ -172,7 +172,7 @@ x_avg = np.mean(last_100_delta, axis=0)   # shape: (n_steps,)
 DA_avg = np.mean(DA_values_last100, axis=0)  # shape: (n_steps,)
 
 # Plot
-plt.figure(figsize=(5,4))
+plt.figure(figsize=(4,2.5))
 plt.plot(time_points, x_avg, label='Average of TD error', color='blue')
 plt.plot(time_points, DA_avg, label='Average of DA', color='orange')
 plt.title('Dopamine Signal vs. TD Error (Last 100 Trials)')

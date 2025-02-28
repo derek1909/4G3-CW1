@@ -1,0 +1,5 @@
+Component	Excess Kurtosis
+c_1	54.331544
+c_3	3.381780
+c_30	1.259637
+c_227	0.903572

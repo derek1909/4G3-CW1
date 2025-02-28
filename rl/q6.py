@@ -106,7 +106,7 @@ for p in p_list:
     avg_DA_curves[p] = avg_da
 
 # Plotting: create a figure with two subplots for average DA and average delta
-fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
+fig, axs = plt.subplots(2, 1, figsize=(6, 6), sharex=True)
 
 # Plot average dopamine time courses for each reward probability
 for p in p_list:

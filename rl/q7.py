@@ -7,12 +7,12 @@ dt = 0.5
 T_trial = 25.0
 time_points = np.arange(0, T_trial+dt, dt)  # 0, 0.5, ..., 25.0
 n_steps = len(time_points)
-N_trials = 1000
+N_trials = 10000
 gamma = 1.0
 eps_boxcar = 0.01  # learning rate for boxcar representation
 
 # Define a list of reward probabilities to simulate.
-p_values = [0.0, 0.25, 0.5, 0.75, 1.0]
+p_values = [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7, 0.8, 0.9,1.0]
 
 # Define stimulus: spike at 10s.
 def stimulus(t):
@@ -126,7 +126,7 @@ for p in p_values:
     avg_DA_reward.append(np.mean(DA_reward_trials))
 
 # Plot the average dopamine at the stimulus and reward windows as a function of p.
-plt.figure(figsize=(8,5))
+plt.figure(figsize=(6,3))
 plt.plot(p_values, avg_DA_stim, marker='o', linestyle='-', label='Dopamine at Stimulus (max in window)')
 plt.plot(p_values, avg_DA_reward, marker='s', linestyle='-', label='Dopamine at Reward (max in window)')
 plt.xlabel('Reward Probability (p)')
